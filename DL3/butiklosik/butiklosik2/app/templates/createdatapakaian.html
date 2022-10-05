@@ -1,0 +1,58 @@
+#jenispakaian 
+ukuranpakaian 
+hargapakaian 
+konfirmasipakaian
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Data</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            <body>
+                <tr>
+                    <th>Jenis Pakaian</th>
+                    <td>
+                        <input type="text" name="jenispakaian">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Ukuran Pakaian</th>
+                    <td>
+                        <input type="number" name="ukuranpakaian">
+                    </td>
+                </tr>
+                <tr>
+                   <th>Harga Pakaian</th>
+                   <td>
+                        <input type="number" name="hargapakaian">
+                   </td>
+                 </tr>
+                <tr>
+                    <th>Konfirmasi Pakaian</th>
+                    <td>
+                        
+                            <select name="konfirmasipakaian" id="">
+                                <option value="ada">Ada</option>
+                                <option value="tidak">Tidak</option>
+                            </select>
+                           
+                        
+                    </td>
+                </tr>
+            </body>
+        </table>
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>

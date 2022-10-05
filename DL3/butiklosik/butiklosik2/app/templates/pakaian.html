@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butiklosik</title>
+</head>
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>
+</body>
+    <h1>Read Data</h1>
+    <h3>Read All Data</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>idpakaian</th>
+                <th>jenispakaian</th> 
+                <th>ukuranpakaian</th>
+                <th>hargapakaian</th>
+                <th>konfirmasipakaian</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in pakaian  %}
+            <tr>
+                <td>{{item.idpakaian}}</td>
+                <td>{{item.jenispakaian}}</td>
+                <td>{{item.ukuranpakaian}}</td>
+                <td>{{item.hargapakaian}}</td>
+                <td>{{item.konfirmasipakaian}}</td>
+                <td>
+                    <a href="{% url 'updatepakaian' item.idpakaian %}">
+                        <button>Update</button>
+                    </a>
+                    <a href="{% url 'delatepakaian' item.idpakaian %}">
+                        <button>Delate</button> 
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3>Read Filtered Data</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>IDPelanggan</th>
+                <th>Nama</th>
+                <th>Jenis Kelamin</th>
+                <th>Nohandphone</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in filterpelanggan %}
+            <tr> 
+                <td>{{item.idpelanggan}}</td>
+                <td>{{item.nama}}</td>
+                <td>{{item.jeniskelamin}}</td>
+                <td>{{item.nohandphone}}</td>
+                <td>{{item.alamat}}</td>
+
+
+            </tr>
+                
+        </tbody> 
+
+</table>
+
+</table>
+</html>
+
